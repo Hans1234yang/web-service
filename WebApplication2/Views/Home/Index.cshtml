@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        debugger
+        $.ajax({
+            type: 'post',
+            url: 'WebService2.asmx/GetWeek',
+            data: '{day:4}',
+            dataType: 'json',
+            contentType: 'application/json',
+            success: function (data) {
+                debugger
+                alert(data.d);
+            }
+        });
+
+
+
+    });
+  
+
+</script>
